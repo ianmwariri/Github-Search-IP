@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GitUs}
 
 @Component({
   selector: 'app-home',
