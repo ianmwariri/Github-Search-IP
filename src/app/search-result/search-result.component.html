@@ -1,1 +1,107 @@
-<p>search-result works!</p>
+<div id="userSection" class="container-fluid">
+    <ng-progress [color]="'blue'"></ng-progress>
+    <div class="card">
+      <div class="row">
+        <div class="col-md-4">
+          <img id="avatar" class="img-thumbnail" src="{{user.userAvatar}}" alt="avatar">
+  
+        </div>
+        <div id="info_section" class="col-md-8">
+  
+          <h4 class="profileName"  *ngIf='user.userName; else noName'><a href="{{user.userProfileURL}}">{{user.userName}}</a></h4>
+          <ng-template #noName>
+            <h4 class="profileName" appErrorHighlight ><a href="{{user.userProfileURL}}">Username Doesn't Exist.</a></h4>
+          </ng-template>
+  
+          <p *ngIf='user.userBio; else noBio'>{{user.userBio}}</p>
+          <ng-template #noBio>
+            <p appErrorHighlight>Bio Doesn't Exist.</p>
+          </ng-template>
+  
+          <div class="row">
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faMapMarkerAlt"></fa-icon>Location
+              </h6>
+              <p *ngIf='user.userLocation;else noLocation'>{{user.userLocation}}</p>
+  
+              <ng-template #noLocation>
+                <p appErrorHighlight>Location Doesn't Exist.</p>
+              </ng-template>
+            </div>
+  
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faEnvelope"></fa-icon>Email
+              </h6>
+              <p *ngIf='user.userEmail;else noEmail'>{{user.userEmail}}</p>
+  
+              <ng-template #noEmail>
+                <p appErrorHighlight>Email is locked.</p>
+              </ng-template>
+            </div>
+  
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faCalendarCheck"></fa-icon>Joined on:
+              </h6>
+              <p>{{user.userCreationDate|date}}</p>
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faEnvelopeOpen"></fa-icon>Repositories
+              </h6>
+              <p>{{user.userRepoCount}}</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faUserFriends"></fa-icon>Followers
+              </h6>
+              <p>{{user.userFollowers}}</p>
+            </div>
+            <div class="col-md-4">
+              <h6 class="titles">
+                <fa-icon  [icon]="faUserFriends"></fa-icon>Following
+              </h6>
+              <p>{{user.userFollowing}}</p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+      
+      <div id="repoSection" style="margin-top: 15px">
+          <h2 class="titles">Repositories</h2>
+        <div id="repoDiv" *ngFor='let repo of repos; let i = index'>
+          <h4><a href="{{repo.gitURL}}">{{repo.name}}</a></h4> 
+          <p>{{repo.descr}}</p>
+          <div class="row">
+            <div class="col-md-3">
+              <p><span><b>Launch Date:</b></span> {{repo.creationDate|date}}</p>
+            </div>
+            <div class="col-md-3">
+              <p><span><b>Date Last Modified:</b></span> {{repo.updateDate|daysPassed}} days ago</p>
+            </div>
+            <div class="col-md-3">
+                <p><span><b>Dominant Language:</b></span> {{repo.lang}}</p>
+            </div>
+            <div class="col-md-3">
+                <p *ngIf='repo.homePage; else noLink'>
+                  <span><b>Live Site Demo:</b></span> 
+                  <a  href='{{repo.homePage}}'> Present<fa-icon id="hostedIcon" [icon]="faCheckCircle"></fa-icon></a>
+                </p>
+  
+                <ng-template #noLink>
+                    <p><span><b>Live Site Demo:</b></span> None</p>
+                </ng-template>
+            </div>
+          </div>
+          <hr>
+        </div>
+      </div> <!-- End of Repo Section-->
+    </div>  <!-- End of Card-->
+  </div>
+  
