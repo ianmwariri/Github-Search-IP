@@ -1,0 +1,10 @@
+.container-fluid {
+    margin: 150px auto;
+}
+
+h1 {
+    margin-bottom: 15px;
+    font-size: 2em;
+    font-weight: 500;
+    
+}

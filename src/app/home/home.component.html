@@ -1,1 +1,24 @@
-<p>home works!</p>
+<div class="container-fluid">
+    <form (ngSubmit)='searchUser(searchForm)' #searchForm='ngForm'>
+      <div class="row">
+        <div class="col-md-4"></div>
+  
+        <div id="searchDiv" class="col-md-4">
+          <h1 class="text-center">Github Search</h1>
+          <div class="form-group">
+            <div class="wrapper">
+              <img id='searchIcon' src="../../assets/images/search-icon.png" alt="Search Icon">
+              <input id="searchBar" placeholder="insert username here..." [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
+                #searchBar='ngModel' required>
+            </div>
+            <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty)' class="alert alert-danger">
+                <div *ngIf="searchBar.errors.required">Please insert a name</div>
+            </div>
+          </div>
+          <button id="submitBtn" *ngIf='searchBar.valid' class="btn btn-outline-secondary">Search User</button>
+        </div>
+        <div class="col-md-4"></div>
+      </div>
+    </form>
+  </div>
+  
