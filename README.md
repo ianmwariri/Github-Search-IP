@@ -3,7 +3,7 @@ This Application enables users to enter a GitHub username into a form, submit it
 #### By Ian Mwariri, Created on 29/08/2020.
 
 # Demo 
-Here is a working live demo: http://
+Here is a working live demo: https://ianmwariri.github.io/Github-Search-IP/
 
 ## Description
 The system will allow a user to:
@@ -19,12 +19,12 @@ The system will allow a user to:
 * Text editor of your choice, e.g. VS Code.
 
 ## Setup/Installation Requirements
-* Copy the repository link : 
+* Copy the repository link : https://github.com/ianmwariri/Github-Search-IP
 * Navigate to the desired folder where you want to store the project.
-* Clone the repository into your computer by running the command: 
-* Change the original remote repository to point to your repository from using the terminal by running the following command in the terminal: git remote set-url origin "newRepository.git.url/here"
-* (Skip if angular is installed) Run npm install -g @angular/cli - in the terminal to install angular CLI.
-* Edit the files using your text editor.
+* Clone the repository into your computer by running the command: git clone https://github.com/ianmwariri/Github-Search-IP
+* Change the original remote repository to point to your repository using the terminal by running the following command: "git remote set-url origin "newRepository.git.url/here"
+* (NB: In the case that Angular is already installed, Do not run this command) Run: npm install -g @angular/cli - in the terminal to install angular CLI.
+* Edit the files in your text editor.
 
 ## Technologies Used
 * TypeScript
