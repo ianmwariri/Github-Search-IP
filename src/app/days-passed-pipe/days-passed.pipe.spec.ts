@@ -1,4 +1,4 @@
-import { DaysPassedPipe } from './days-passed.pipe';
+import { DaysPassedPipe } from './DaysPassedPipe';
 
 describe('DaysPassedPipe', () => {
   it('create an instance', () => {

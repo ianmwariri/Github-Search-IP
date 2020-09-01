@@ -26,26 +26,27 @@ export class HomeComponent implements OnInit {
     }
     else {
       this.userService.generateURL(this.userInput);
-     
+       
       //reset repositories:
       this.userService.allRepos = []; 
       var userResult = this.userService.profileSearch();
       this.userService.repoSearch();
+
       if(!userResult){
-      
         //when the promise is rejected, hence:
         alert("Sorry, an unexpected error occured.");
       }
       else {
         //when the promise is accepted:
         this.user = this.userService.user;
+        console.log("User: ",this.user)
         setTimeout(()=>{
           this.router.navigate(['/result',this.user.userLoginName]);
         },1000)
       }
       this.userInput="";
       form.reset();
-      }  
+    }  
   }
   constructor(private userService: GithubUserService, private router: Router) { }
 

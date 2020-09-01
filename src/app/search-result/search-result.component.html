@@ -15,35 +15,35 @@
   
           <p *ngIf='user.userBio; else noBio'>{{user.userBio}}</p>
           <ng-template #noBio>
-            <p appErrorHighlight>Bio Doesn't Exist.</p>
+            <p appErrorHighlight>No Bio.</p>
           </ng-template>
   
           <div class="row">
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faMapMarkerAlt"></fa-icon>Location
+                <!-- <fa-icon  [icon]="faMapMarkerAlt"></fa-icon>Location -->
               </h6>
               <p *ngIf='user.userLocation;else noLocation'>{{user.userLocation}}</p>
   
               <ng-template #noLocation>
-                <p appErrorHighlight>Location Doesn't Exist.</p>
+                <p appErrorHighlight>No Location.</p>
               </ng-template>
             </div>
   
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faEnvelope"></fa-icon>Email
+                <!-- <fa-icon  [icon]="faEnvelope"></fa-icon>Email -->
               </h6>
               <p *ngIf='user.userEmail;else noEmail'>{{user.userEmail}}</p>
   
               <ng-template #noEmail>
-                <p appErrorHighlight>Email is locked.</p>
+                <p appErrorHighlight>No Email.</p>
               </ng-template>
             </div>
   
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faCalendarCheck"></fa-icon>Joined on:
+                <!-- <fa-icon  [icon]="faCalendarCheck"></fa-icon>Joined on: -->
               </h6>
               <p>{{user.userCreationDate|date}}</p>
             </div>
@@ -52,19 +52,19 @@
           <div class="row">
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faEnvelopeOpen"></fa-icon>Repositories
+                <!-- <fa-icon  [icon]="faEnvelopeOpen"></fa-icon>Repositories -->
               </h6>
               <p>{{user.userRepoCount}}</p>
             </div>
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faUserFriends"></fa-icon>Followers
+                <!-- <fa-icon  [icon]="faUserFriends"></fa-icon>Followers -->
               </h6>
               <p>{{user.userFollowers}}</p>
             </div>
             <div class="col-md-4">
               <h6 class="titles">
-                <fa-icon  [icon]="faUserFriends"></fa-icon>Following
+                <!-- <fa-icon  [icon]="faUserFriends"></fa-icon>Following -->
               </h6>
               <p>{{user.userFollowing}}</p>
             </div>

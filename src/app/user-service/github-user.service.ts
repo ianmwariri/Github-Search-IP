@@ -16,8 +16,8 @@ export class GithubUserService {
   repoUrl: string;
 
   generateURL(searchedName: string){
-    this.fullURL = (environment.apiUrl+"/users/"+searchedName+"?access_token="+environment.apiKey)
-    this.repoUrl = (environment.apiUrl+"/users/"+searchedName+"/repos?access_token="+environment.apiKey);
+    this.fullURL = `${environment.apiUrl}/users/${searchedName}?access_token=${environment.apiKey}`
+    this.repoUrl = `${environment.apiUrl}/users/${searchedName}/repos?access_token=${environment.apiKey}`;
   }
 
   profileSearch(){

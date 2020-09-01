@@ -8,3 +8,11 @@ h1 {
     font-weight: 500;
     
 }
+
+#searchIcon{
+    position: absolute;
+  top: 6px;
+  max-width: 60px;
+  /* left: 10px; */
+
+}
