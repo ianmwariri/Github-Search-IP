@@ -13,7 +13,7 @@
             <h4 class="profileName" appErrorHighlight ><a href="{{user.userProfileURL}}">Username Doesn't Exist.</a></h4>
           </ng-template>
   
-          <p *ngIf='user.userBio; else noBio'>{{user.userBio}}</p>
+          <p *ngIf='user.userBio; else noBio'>Bio: {{user.userBio}}</p>
           <ng-template #noBio>
             <p appErrorHighlight>No Bio.</p>
           </ng-template>
@@ -23,7 +23,7 @@
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faMapMarkerAlt"></fa-icon>Location -->
               </h6>
-              <p *ngIf='user.userLocation;else noLocation'>{{user.userLocation}}</p>
+              <p *ngIf='user.userLocation;else noLocation'>Location: {{user.userLocation}}</p>
   
               <ng-template #noLocation>
                 <p appErrorHighlight>No Location.</p>
@@ -34,7 +34,7 @@
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faEnvelope"></fa-icon>Email -->
               </h6>
-              <p *ngIf='user.userEmail;else noEmail'>{{user.userEmail}}</p>
+              <p *ngIf='user.userEmail;else noEmail'>Email: {{user.userEmail}}</p>
   
               <ng-template #noEmail>
                 <p appErrorHighlight>No Email.</p>
@@ -45,7 +45,7 @@
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faCalendarCheck"></fa-icon>Joined on: -->
               </h6>
-              <p>{{user.userCreationDate|date}}</p>
+              <p>Join Date: {{user.userCreationDate|date}}</p>
             </div>
           </div>
   
@@ -54,19 +54,19 @@
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faEnvelopeOpen"></fa-icon>Repositories -->
               </h6>
-              <p>{{user.userRepoCount}}</p>
+              <p>Repositories: {{user.userRepoCount}}</p>
             </div>
             <div class="col-md-4">
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faUserFriends"></fa-icon>Followers -->
               </h6>
-              <p>{{user.userFollowers}}</p>
+              <p>Followers: {{user.userFollowers}}</p>
             </div>
             <div class="col-md-4">
               <h6 class="titles">
                 <!-- <fa-icon  [icon]="faUserFriends"></fa-icon>Following -->
               </h6>
-              <p>{{user.userFollowing}}</p>
+              <p>Following: {{user.userFollowing}}</p>
             </div>
           </div>
   
