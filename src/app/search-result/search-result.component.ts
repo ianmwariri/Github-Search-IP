@@ -14,6 +14,7 @@ export class SearchResultComponent implements OnInit {
       user: User;
       repos: Repo[] = [];
 
+      //fa elements commented:
       // faMapMarkerAlt = faMapMarkerAlt;
       // faEnvelope = faEnvelope;
       // faCalendarCheck = faCalendarCheck;
