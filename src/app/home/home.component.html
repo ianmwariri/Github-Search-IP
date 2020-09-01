@@ -8,11 +8,11 @@
           <div class="form-group">
             <div class="wrapper">
               <img id='searchIcon' src="../../assets/images/search.png" alt="Search Icon">
-              <input id="searchBar" placeholder="insert username here..." [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
+              <input id="searchBar" placeholder="Insert username here..." [(ngModel)]='userInput' name='searchBar' type="text" class="form-control"
                 #searchBar='ngModel' required>
             </div>
             <div id="errorDiv" *ngIf='searchBar.invalid && (searchBar.touched || searchBar.dirty)' class="alert alert-danger">
-                <div *ngIf="searchBar.errors.required">Please insert a Username.</div>
+                <div *ngIf="searchBar.errors.required">Please Insert a Username.</div>
             </div>
           </div>
           <button id="submitBtn" *ngIf='searchBar.valid' class="btn btn-outline-secondary">Search User</button>
