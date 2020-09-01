@@ -3,7 +3,7 @@ This Application enables users to enter a GitHub username into a form, submit it
 #### By Ian Mwariri, Created on 29/08/2020.
 
 # Demo 
-Here is a working live demo: 
+Here is a working live demo: http://
 
 ## Description
 The system will allow a user to:
